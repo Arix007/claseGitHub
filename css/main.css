@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to left, #F8CED8, rgb(235, 111, 111));
+}
+
+header h1{
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    text-decoration: none;
+    list-style: none;    
+    margin: 1rem;
+    background-color: whitesmoke;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+/*tranformacion de menu */
+/*nav ul li:hover{
+    background-color: #eb829b;
+    transform: scale(1);
+    
+}
+img{
+    transition: 0.8s;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+*/
+
+/*Animaciones */
+.imgLuna{
+    width: 60%;
+    animation-name: girar;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+}
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.mainNosotros{
+    display: grid;
+    height: 80vh;
+    grid-template-areas: "mainP mainP"
+    "imagen1 imagen2"
+    "imagen3 imagen4"
+    "parrafo parrafo";
+    justify-content: center;
+}
+.sectionNosotros{
+    display: none;
+}
+.mainP{
+    grid-area: mainP;
+    text-align: center;
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.imagen3{
+    grid-area: imagen3;
+}.imagen4{
+    grid-area: imagen4;
+}
+.parrafo{
+    grid-area: parrafo;
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
+
+
+/*medias query*/
+
+@media only screen and (min-width:600px){
+    
+    .mainNosotros{
+        display: grid;
+        height: 80vh;
+        grid-template-areas: "mainP mainP mainP mainP"
+        "img img img img"
+        "imagen1 imagen2 imagen3 imagen4"
+        "parrafo parrafo parrafo parrafo";
+        justify-content: center;
+    }
+    .sectionNosotros{
+        display: block;
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainP, .parrafo{
+        font-size: 1.3rem;
+
+    }
+    .imagen1, .imagen2, .imagen3, .imagen4{
+        padding: 0.8rem;
+        
+    }
+    main div img{
+        width: 60%;
+    }
+}
+@media only screen and (min-width:1024px){
+    .mainNosotros{
+        display: grid;
+        height: 80vh;
+        grid-template-areas: "mainP mainP img img"
+        
+        "imagen1 imagen2 imagen3 imagen4"
+        "parrafo parrafo parrafo parrafo";
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*2 unidades de medida em y rem*/
+
+/* el body tiene font size de 16px
+
+div{
+    font-size: 60px;
+}
+header h1{
+    font-size: 1em;
+}
+
+div p{
+    font-size: 0.4em;
+}
+
+main p{
+    font-size: 1rem;
+}
+*/
